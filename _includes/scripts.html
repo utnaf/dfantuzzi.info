@@ -1,0 +1,33 @@
+<script>
+    window.ga = function () {
+        ga.q.push(arguments);
+    };
+    ga.q = [];
+    ga.l = +new Date();
+    ga("create", "UA-166053145-1", "auto");
+    ga("set", "transport", "beacon");
+    ga("send", "pageview");
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+<script>
+    document.addEventListener("click", function (event) {
+        var logData = event.target.dataset.log;
+        var eventLabel = null;
+        var eventValue = null;
+
+        if (logData) {
+            var params = logData.split("|");
+            eventLabel = params[0];
+            eventValue = params[1];
+        }
+
+        ga(
+            "send",
+            "event",
+            "general",
+            "click",
+            eventLabel || "unknown",
+            eventValue || event.target.innerText || "unknown"
+        );
+    });
+</script>

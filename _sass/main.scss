@@ -1,0 +1,492 @@
+$color-bg: #ffffff;
+$color-text: #00171f;
+$color-primary: #245501;
+$color-secondary: #2c8600;
+$color-link: #73a942;
+
+html {
+  color: $color-text;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: $color-link;
+  color: $color-text;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Custom Style
+   ========================================================================== */
+body {
+  font-weight: 300;
+  font-family: "Jost", sans-serif;
+  font-size: 1.1rem;
+}
+
+.text-title {
+  position: relative;
+}
+.text-title:before {
+  content: "";
+  display: inline-block;
+  background: url("../img/logo-small.png");
+  background-size: 25px 25px;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  left: -40px;
+  top: 5px;
+}
+
+.square-bg {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3"><rect width="50" height="50" style="fill:rgba(255,255,255,0);stroke-width:3;stroke:rgb(240, 255, 245)" /></svg>');
+}
+
+.header {
+  border-top: 0.1rem solid #2c8600;
+  border-bottom: 0.05rem solid #2c8600;
+  margin-top: 0.1rem;
+  width: 100%;
+}
+
+.container {
+  width: 760px;
+  margin: auto;
+}
+
+.title {
+  color: #245501;
+  float: right;
+  display: block;
+}
+
+.profile-picture {
+  margin-top: 1rem;
+  width: 60px;
+  height: 60px;
+  float: right;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 0.05rem solid #2c8600;
+  box-shadow: 0 0 3px 0px #73a942;
+  background: url("https://www.gravatar.com/avatar/76c7872136509d218d15a0abbf304ac8?s=60")
+    0 0;
+}
+
+.profile-picture img {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.profile-picture:hover img {
+  opacity: 0;
+}
+
+.figure {
+  box-sizing: border-box;
+  margin: 3rem;
+}
+.figure-caption {
+  font-size: 0.8rem;
+  text-align: center;
+  padding-top: 0.3rem;
+  font-style: italic;
+}
+.figure-image {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.5rem;
+  border: 0.05rem solid #245501;
+  border-radius: 0.2rem;
+}
+
+.cover {
+  background: url("../img/avatar.jpg") no-repeat center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 500px;
+  z-index: 0;
+  box-shadow: 0 2px 2px 0 #00171f;
+}
+
+.main {
+  margin-top: 2rem;
+}
+
+.inline-icon {
+  line-height: 1.4;
+  margin: 0.1rem 0.2rem;
+  display: inline-block;
+}
+
+.footer {
+  margin-top: 2rem;
+  padding: 0.5rem 0 1rem;
+  padding: 1rem 1rem 2rem;
+}
+
+.footer .flex {
+  flex-direction: column;
+}
+
+.copy {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: #73a942;
+}
+a:active,
+a:hover {
+  color: #2c8600 !important;
+}
+
+/* List */
+.simple-list {
+  margin: 0;
+  padding: 0;
+}
+.simple-list-item {
+  margin: 0.3rem 0 0 0;
+  padding: 0.2rem 0;
+  list-style: none;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+.simple-list-item-icon {
+  font-size: 1.8rem;
+  display: inline-block;
+  border: 0.05rem solid #d7f5e1;
+  padding: 0.6rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+.simple-list-item-icon:hover {
+  border: 0.05rem solid #b3e3c3;
+}
+
+.show-sm {
+  display: none;
+}
+.hide-sm {
+  display: block;
+}
+
+.copy {
+  text-align: center;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 860px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-title:before {
+    display: none;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .title {
+    order: 2;
+    margin: 0.3rem auto 0.8rem;
+    font-size: 3rem;
+  }
+
+  .profile-picture {
+    margin: 2rem auto 0;
+    order: 1;
+    width: 120px;
+    height: 120px;
+    background: url("https://www.gravatar.com/avatar/76c7872136509d218d15a0abbf304ac8?s=120")
+      0 0;
+  }
+
+  .main {
+    margin-top: 0;
+    padding: 1rem;
+  }
+
+  .show-sm {
+    display: block;
+  }
+  .hide-sm {
+    display: none;
+  }
+
+  .figure {
+    margin: 0;
+  }
+  .figure-image {
+    border-radius: 0;
+  }
+
+  .fade-out {
+    -webkit-animation: fade-out 10s ease-in-out infinite alternate;
+    animation: fade-out 10s ease-in-out infinite alternate;
+  }
+
+  @-webkit-keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

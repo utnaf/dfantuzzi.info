@@ -1,0 +1,11 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Davide -- Developer -- @utnaf
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Jekyll, HTML5Boilerplate, Normalize.css
