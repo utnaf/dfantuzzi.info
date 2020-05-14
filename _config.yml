@@ -1,3 +1,5 @@
-url: "http://dfantuzzi.info" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/" # the subpath of your site, e.g. /blog
-title: "Davide Fantuzzi" # the name of your site, e.g. ACME Corp.
+url: "http://dfantuzzi.info"
+baseurl: "/"
+title: "Davide Fantuzzi"
+description: "Davide Fantuzzi, Remote Data Engineer @LarusBA. Writing on the web, for the web."
+role: "Data Engineer"
