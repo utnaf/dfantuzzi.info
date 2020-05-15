@@ -84,30 +84,9 @@ body {
   font-size: 1.1rem;
 }
 
-.text-title {
-  position: relative;
-}
-.text-title:before {
-  content: "";
-  display: inline-block;
-  background: url("../img/logo-small.png");
-  background-size: 25px 25px;
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  left: -40px;
-  top: 5px;
-}
-
-.square-bg {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3"><rect width="50" height="50" style="fill:rgba(255,255,255,0);stroke-width:3;stroke:rgb(240, 255, 245)" /></svg>');
-}
-
-.header {
-  border-top: 0.1rem solid #2c8600;
-  border-bottom: 0.05rem solid #2c8600;
-  margin-top: 0.1rem;
-  width: 100%;
+h2 {
+  margin-bottom: 0rem;
+  margin-top: 1.3rem;
 }
 
 .container {
@@ -115,10 +94,27 @@ body {
   margin: auto;
 }
 
+.square-bg {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3"><rect width="50" height="50" style="fill:rgba(255,255,255,0);stroke-width:3;stroke:rgb(240, 255, 245)" /></svg>');
+}
+
+.header {
+  border-top: 0.05rem solid #2c8600;
+  border-bottom: 0.1rem solid #2c8600;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
+
 .title {
   color: #245501;
   float: right;
   display: block;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .profile-picture {
@@ -132,45 +128,44 @@ body {
   box-shadow: 0 0 3px 0px #73a942;
   background: url("https://www.gravatar.com/avatar/76c7872136509d218d15a0abbf304ac8?s=60")
     0 0;
-}
-
-.profile-picture img {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;
-}
-
-.profile-picture:hover img {
-  opacity: 0;
+  img {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  &:hover {
+    img {
+      opacity: 0;
+    }
+  }
 }
 
 .figure {
   box-sizing: border-box;
   margin: 3rem;
-}
-.figure-caption {
-  font-size: 0.8rem;
-  text-align: center;
-  padding-top: 0.3rem;
-  font-style: italic;
-}
-.figure-image {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0.5rem;
-  border: 0.05rem solid #245501;
-  border-radius: 0.2rem;
-}
-
-.cover {
-  background: url("../img/avatar.jpg") no-repeat center center;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 500px;
-  z-index: 0;
-  box-shadow: 0 2px 2px 0 #00171f;
+  &-caption {
+    font-size: 0.8rem;
+    text-align: center;
+    padding-top: 0.3rem;
+    font-style: italic;
+  }
+  .figure-image {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.5rem;
+    border: 0.05rem solid $color-primary;
+    border-radius: 0.2rem;
+  }
+  .cover {
+    background: url("../img/avatar.jpg") no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    z-index: 0;
+    box-shadow: 0 2px 2px 0 $color-text;
+  }
 }
 
 .main {
@@ -187,15 +182,20 @@ body {
   margin-top: 2rem;
   padding: 0.5rem 0 1rem;
   padding: 1rem 1rem 2rem;
-}
+  .flex {
+    flex-direction: column;
+  }
+  .copy {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 
-.footer .flex {
-  flex-direction: column;
-}
-
-.copy {
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  &-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .flex {
@@ -203,54 +203,107 @@ body {
   justify-content: space-between;
 }
 
-.footer-column {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
 a {
-  color: #73a942;
-}
-a:active,
-a:hover {
-  color: #2c8600 !important;
+  color: $color-link;
+  &:active,
+  &:hover {
+    color: $color-secondary;
+  }
 }
 
-/* List */
-.simple-list {
+/* Post list */
+.post {
+  &-title {
+    margin: 0.3rem 0;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $color-primary;
+    }
+  }
+  &-time {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+  &-list {
+    margin: 0;
+    padding: 0;
+    &-item {
+      margin: 0.7rem 0;
+      padding: 0;
+      list-style: none;
+      &:not(:last-child) {
+        &:after {
+          content: "~";
+          display: block;
+          width: 100%;
+          text-align: center;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+/* Paginator */
+.paginator {
+  margin: 4rem auto 1rem;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  &-item {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    &-right {
+      float: right;
+    }
+    &-left {
+      float: left;
+    }
+  }
+}
+
+/* Social List */
+.social-list {
   margin: 0;
   padding: 0;
-}
-.simple-list-item {
-  margin: 0.3rem 0 0 0;
-  padding: 0.2rem 0;
-  list-style: none;
-  display: inline-block;
-  margin-right: 0.7rem;
-}
-.simple-list-item-icon {
-  font-size: 1.8rem;
-  display: inline-block;
-  border: 0.05rem solid #d7f5e1;
-  padding: 0.6rem;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-}
-
-.simple-list-item-icon:hover {
-  border: 0.05rem solid #b3e3c3;
-}
-
-.show-sm {
-  display: none;
-}
-.hide-sm {
-  display: block;
+  &-item {
+    list-style: none;
+    margin: 0.3rem 0 0 0;
+    padding: 0.2rem 0;
+    display: inline-block;
+    margin-right: 0.7rem;
+    &-icon {
+      font-size: 1.8rem;
+      display: inline-block;
+      border: 0.05rem solid $color-link;
+      padding: 0.6rem;
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      &:hover {
+        border: 0.05rem solid $color-secondary;
+      }
+    }
+  }
 }
 
-.copy {
-  text-align: center;
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  &-list {
+    margin: 0;
+    padding: 0;
+    &-item {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
 }
 
 /* ==========================================================================
@@ -263,6 +316,13 @@ a:hover {
 
 .hidden {
   display: none !important;
+}
+
+.show-sm {
+  display: none;
+}
+.hide-sm {
+  display: block;
 }
 
 /*
@@ -416,6 +476,16 @@ a:hover {
     100% {
       opacity: 0;
     }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .title {
+    font-size: 2.6rem;
+  }
+  .social-list-item-icon {
+    font-size: 1.2rem;
+    padding: 0.4rem;
   }
 }
 
