@@ -6,23 +6,7 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <meta name="author" content="Davide Fantuzzi - http://dfantuzzi.info/" />
-    <meta name="description" content="{{ site.description }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <meta itemprop="name" content="{{ site.title }} - {{ site.role }}" />
-    <meta property="og:title" content="{{ site.title }} - {{ site.role }}" />
-    <meta property="og:site_name" content="{{ site.title }} Personal Space" />
-    <meta name="description" content="{{ site.description }}" />
-    <meta itemprop="description" content="{{ site.description }}" />
-    <meta property="og:description" content="{{ site.description }}" />
-    <meta property="og:url" content="http://dfantuzzi.info" />
-    <meta
-      property="og:image"
-      content="http://www.dfantuzzi.info/tile-wide.png"
-    />
-    <meta itemprop="image" content="http://www.dfantuzzi.info/tile-wide.png" />
-
+    {% seo %}
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="apple-touch-icon" href="/icon.png" />
     <link

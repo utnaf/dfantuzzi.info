@@ -1,10 +1,20 @@
 plugins:
   - jekyll-paginate
+  - jekyll-seo-tag
 
 url: "http://dfantuzzi.info"
 baseurl: ""
+
+author:
+  name: Davide Fantuzzi
+  twitter: utnaf
+  picture: /img/avatar.jpg
+
+# seo
 title: "Davide Fantuzzi"
-description: "Davide Fantuzzi, Remote Data Engineer @LarusBA. Writing on the web, for the web."
+tagline: "Web tips for developers"
+description: "Davide Fantuzzi, Remote Data Engineer @LarusBA. In my blog I'll share some thoughts about software, music, and travels."
+
 role: "Data Engineer"
 
 paginate: 5
