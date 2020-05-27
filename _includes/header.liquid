@@ -5,20 +5,9 @@
         href="http://explosm.net/comics/3709/"
         class="profile-picture"
         title="Click Me!"
-        data-log="link|explosm"
+        target="_blank"
       >
-        <img
-          src="/assets/img/avatar.jpg"
-          alt="Shrug"
-          width="60"
-          class="hide-sm"
-        />
-        <img
-          src="/assets/img/avatar.jpg"
-          alt="Shrug"
-          width="120"
-          class="show-sm fade-out"
-        />
+        <img src="/assets/img/avatar.jpg" alt="Shrug" width="60" />
       </a>
       <h1 class="title">
         <a href="/">{{ site.title }}</a>
@@ -27,7 +16,11 @@
 
     <section class="menu">
       <ul class="menu-list">
+        {% if page.type == 'home' %}
         <li class="menu-list-item"><a href="/blog">Blog</a></li>
+        {% else %}
+        <li class="menu-list-item"><a href="/">About</a></li>
+        {% endif %}
       </ul>
     </section>
   </div>

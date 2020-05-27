@@ -219,6 +219,30 @@ a {
   margin-right: auto;
 }
 
+.banner {
+  margin-top: 0.1rem;
+  box-shadow: 0 2px 2px 1px #000;
+  position: relative;
+  &-credits {
+    padding: 0.2rem;
+    background-color: rgba($color-bg, 0.5);
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.8rem;
+    a {
+      color: $color-primary;
+    }
+  }
+  height: 500px;
+  width: 100%;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 hr {
   content: "~";
   display: block;
@@ -229,6 +253,11 @@ hr {
 
 /* Post list */
 .post {
+  &-header {
+    font-size: 0.8rem;
+    text-align: right;
+    margin-bottom: 3rem;
+  }
   &-title {
     margin: 0.3rem 0;
     a {
@@ -424,6 +453,30 @@ hr {
     box-sizing: border-box;
   }
 
+  .banner {
+    &-credits {
+      padding: 0.2rem;
+      background-color: rgba($color-bg, 0.5);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      text-align: center;
+    }
+    height: 300px;
+    width: 100%;
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .post h1,
+  .post-header {
+    text-align: center;
+  }
+
   .text-title:before {
     display: none;
   }
@@ -434,22 +487,25 @@ hr {
 
   .title {
     order: 2;
-    margin: 0.3rem auto 0.8rem;
-    font-size: 3rem;
+    margin: 0.3rem auto 0;
+    font-size: 2.3rem;
   }
 
   .profile-picture {
     display: block;
-    margin: 2rem auto 0;
-    width: 120px;
-    height: 120px;
-    background: url("https://www.gravatar.com/avatar/76c7872136509d218d15a0abbf304ac8?s=120")
+    margin: 1rem auto 0;
+    background: url("https://www.gravatar.com/avatar/76c7872136509d218d15a0abbf304ac8?s=60")
       0 0;
   }
 
   .menu {
+    margin-top: 0rem;
     margin-left: auto;
     margin-right: auto;
+    font-size: 0.9rem;
+    &-list-item {
+      padding-top: 0;
+    }
   }
 
   .main {

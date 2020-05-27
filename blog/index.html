@@ -1,20 +1,24 @@
 ---
 layout: default
 title: "Blog"
+image: "assets/img/logo.jpg"
 ---
 
-<ul class="post-list">
-    {% for post in paginator.posts %}
-    <li class="post-list-item">
-        <time class="post-time">{{ post.date | date_to_long_string }}</time>
-        <h2 class="post-title">
-            <a href="{{ post.url }}">{{post.title}}</a>
-        </h2>
-        <p>
-            {{ post.excerpt | strip_html | strip_newlines }}
-        </p>
-    </li>
-    {% endfor %}
-</ul>
+<main class="main container">
+    <ul class="post-list">
+        {% for post in paginator.posts %}
+        <li class="post-list-item">
+            <time class="post-time">{{ post.date | date_to_long_string }}</time>
+            <h2 class="post-title">
+                <a href="{{ post.url }}">{{post.title}}</a>
+            </h2>
+            <p>
+                {{ post.excerpt | strip_html | strip_newlines }}
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
 
-{% if paginator.total_pages > 1 %} {% include pagination.liquid %} {% endif %}
+    {% if paginator.total_pages > 1 %} {% include pagination.liquid %} {% endif
+    %}
+</main>
