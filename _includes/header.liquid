@@ -1,0 +1,27 @@
+<header class="header square-bg">
+  <div class="container flex">
+    <div class="header-left-side">
+      <a
+        href="http://explosm.net/comics/3709/"
+        class="profile-picture"
+        title="Click Me!"
+        target="_blank"
+      >
+        <img src="/assets/img/avatar.jpg" alt="Shrug" width="60" />
+      </a>
+      <h1 class="title">
+        <a href="/">{{ site.title }}</a>
+      </h1>
+    </div>
+
+    <section class="menu">
+      <ul class="menu-list">
+        {% if page.type == 'home' %}
+        <li class="menu-list-item"><a href="/blog">Blog</a></li>
+        {% else %}
+        <li class="menu-list-item"><a href="/">About</a></li>
+        {% endif %}
+      </ul>
+    </section>
+  </div>
+</header>
