@@ -1,5 +1,4 @@
 plugins:
-  - jekyll-paginate
   - jekyll-seo-tag
 
 url: "http://dfantuzzi.info"
@@ -16,6 +15,3 @@ tagline: "Web tips for developers"
 description: "Davide Fantuzzi, Remote Data Engineer @LarusBA. In my blog I'll share some thoughts about software, music, and travels."
 
 role: "Data Engineer"
-
-paginate: 5
-paginate_path: "/blog/page:num/"
