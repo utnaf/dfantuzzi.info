@@ -22,7 +22,7 @@
       "/assets/css/main.css" | relative_url
     }}">
   </head>
-  <body>
+  <body class="fully-centered">
     <!--[if IE]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
@@ -30,8 +30,12 @@
         your experience and security.
       </p>
     <![endif]-->
-    {% include header.liquid %}
-    {{ content }}
-    {% include footer.liquid %}
+    <main class="main">
+      {{ content }}
+    </main>
+    <footer class="footer">
+      {% include footer.liquid %}
+    </footer>
+    {% include scripts.liquid %}
   </body>
 </html>
